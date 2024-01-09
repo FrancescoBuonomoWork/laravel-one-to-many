@@ -14,8 +14,13 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="language" class="form-label">Linguaggio</label>
-                    <input type="text" name="language" class="form-control" id="language" value="{{old('language',$project->language)}}">
+                    <label for="types_id" class="form-label">Categories</label>
+                    <select name="types_id" class="form-control" id="types_id">
+                      <option>Seleziona una tipo</option>
+                      @foreach($types as $type)
+                        <option @selected( old('types_id') == $type->id ) value="{{ $type->id }}">{{ $type->name }}</option>
+                      @endforeach
+                    </select>
                 </div>
 
                 <button type="submit" class="btn btn-success">Aggiungi</button>

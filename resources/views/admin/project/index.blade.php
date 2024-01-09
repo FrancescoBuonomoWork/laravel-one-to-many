@@ -16,7 +16,9 @@
                                 <h5 class="card-title">{{$project->name}}</h5>
                                 <ul>
                                     {{-- <li>{{$project->name}}</li> --}}
-                                    <li>{{$project->language}}</li>
+                                    <li>{{isset($project->type) ? $project->type->name : '-'}}</li>
+                                 
+                               
                                     <li><a class="btn btn-sm btn-primary" href="{{route('admin.project.edit',$project)}}">Edit</a></li>
 
                                     <li>

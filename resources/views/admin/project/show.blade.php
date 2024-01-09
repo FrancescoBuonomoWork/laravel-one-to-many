@@ -9,7 +9,7 @@
                 <div class="col">
                     <ul>
                         <li>{{$project->name}}</li>
-                        <li>{{$project->language}}</li>
+                        <li>{{isset($project->type) ? $project->type->name : '-'}}</li>
                     </ul>
                     
                     
