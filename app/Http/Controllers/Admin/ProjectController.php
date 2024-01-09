@@ -37,7 +37,7 @@ class ProjectController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255|string|unique:projects',
-            'language' => 'required|max:100|string'
+           
         ]);
         $data = $request->all();
 
@@ -71,7 +71,7 @@ class ProjectController extends Controller
     {
         $request->validate([
             'name' => ['required','max:255','string',ValidationRule::unique('projects')->ignore($project->id)],
-            'language' => 'required|max:100|string'
+           
         ]);
         $data = $request->all();
         
