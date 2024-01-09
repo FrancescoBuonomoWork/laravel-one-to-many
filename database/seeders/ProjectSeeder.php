@@ -17,7 +17,6 @@ class ProjectSeeder extends Seeder
         for($i = 0; $i < 10; $i++){
             $new_project = new Project();
             $new_project->name = $faker->name();
-            $new_project->language = $faker->languageCode();
             $new_project->save();
         }
     }

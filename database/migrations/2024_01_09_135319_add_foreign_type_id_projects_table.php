@@ -15,7 +15,7 @@ return new class extends Migration
             // aggiungiamo il campo type_id
             $table->unsignedBigInteger('type_id')->nullable()->after('id');
             // aggiungiamo il vincolo della relazione 
-            $table->foreign('tpye_id')->references('id')->on('types')->onDelete('set null')->onUpdate('cascade');
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('set null')->onUpdate('cascade');
         });
     }
 

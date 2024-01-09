@@ -11,8 +11,10 @@ class Project extends Model
 
     protected $fillable = [
         'name',
-        'language',
-    ];
         
+    ];
+    public function type() {
+        return $this->belongTo(Type::class);
+    }    
     
 }
